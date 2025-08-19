@@ -18,6 +18,6 @@ __global__ void gmme(float* A, float* B, float* C, int N){
         __syncthreads();
         
     }
-    C[col*N + row] = sum;
+    C[row * N + col] = sum;
     return;
 }
